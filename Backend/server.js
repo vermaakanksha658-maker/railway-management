@@ -37,7 +37,8 @@ app.use('/api/auth',authRoutes);
 app.use('/api/trains',trainRoutes);
 app.use('/api/bookings',bookingRoutes);
 
+const PORT = process.env.PORT || 8200;
 
-app.listen("8200", async function (req, res) {
-  console.log("server is connected on port 8200")
-})
+app.listen(PORT, () => {
+  console.log(`server is connected on port ${PORT}`);
+});
