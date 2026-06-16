@@ -8,7 +8,7 @@ function TotalUsers() {
   const getAllUsers = async () => {
     
     try {
-      const res = await axios.get("http://localhost:8200/api/auth/users", { headers: { Authorization: `Bearer ${token}`, }, });
+      const res = await axios.get("https://railway-management-22qq.onrender.com/api/auth/users", { headers: { Authorization: `Bearer ${token}`, }, });
       setUsers(res.data);
     } catch (error) {
       console.log(error.response?.data || error.message);

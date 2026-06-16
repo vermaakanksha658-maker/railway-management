@@ -14,7 +14,7 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:8200/api/auth/register", formData);
+      const res = await axios.post("https://railway-management-22qq.onrender.com/api/auth/register", formData);
       alert(res.data.message);
       navigate("/login");
     } catch (error) {

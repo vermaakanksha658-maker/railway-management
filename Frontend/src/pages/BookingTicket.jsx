@@ -31,7 +31,7 @@ const handlePayment = async () => {
     const totalAmount = fare;
 
     const { data } = await axios.post(
-      "http://localhost:8200/api/payment/create-order",
+      "https://railway-management-22qq.onrender.com/api/payment/create-order",
       { ticketPrice: totalAmount, quantity: 1 }
     );
 
@@ -76,7 +76,7 @@ const handlePayment = async () => {
     const token = localStorage.getItem("token");
 
     const res = await axios.post(
-      "http://localhost:8200/api/bookings/book",
+      "https://railway-management-22qq.onrender.com/api/bookings/book",
       payload,
       {
         headers: {
@@ -161,7 +161,7 @@ const addPassenger = () => {
       };
 
       const token = localStorage.getItem("token");
-      const res = await axios.post( "http://localhost:8200/api/bookings/book", payload, { headers: { Authorization: `Bearer ${token}` }} );
+      const res = await axios.post( "https://railway-management-22qq.onrender.com/api/bookings/book", payload, { headers: { Authorization: `Bearer ${token}` }} );
 
       alert(res.data.message);
       navigate("/mybookings");

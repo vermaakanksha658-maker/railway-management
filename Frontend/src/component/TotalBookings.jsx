@@ -12,7 +12,7 @@ function TotalBookings() {
     try {
 
       const res = await axios.get(
-        "http://localhost:8200/api/bookings/all",
+        "https://railway-management-22qq.onrender.com/api/bookings/all",
         {
           headers: { Authorization: `Bearer ${token}` }
         }

@@ -14,7 +14,7 @@ function MyBookings() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:8200/api/bookings/my",
+        "https://railway-management-22qq.onrender.com/api/bookings/my",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -45,7 +45,7 @@ function MyBookings() {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:8200/api/bookings/${id}`,
+        `https://railway-management-22qq.onrender.com/api/bookings/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`

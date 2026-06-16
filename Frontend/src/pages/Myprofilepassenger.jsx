@@ -10,7 +10,7 @@ function Myprofilepassenger() {
   useEffect(() => {
     const getProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:8200/api/auth/profile", { headers: { Authorization: `Bearer ${token}` } });
+        const res = await axios.get("https://railway-management-22qq.onrender.com/api/auth/profile", { headers: { Authorization: `Bearer ${token}` } });
         setFormData({ ...res.data, dob: res.data?.dob?.slice(0, 10) || "" });
       } catch (error) {
         console.error(error);
@@ -26,7 +26,7 @@ function Myprofilepassenger() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put("http://localhost:8200/api/auth/profile", formData, { headers: { Authorization: `Bearer ${token}` } });
+      await axios.put("https://railway-management-22qq.onrender.com/api/auth/profile", formData, { headers: { Authorization: `Bearer ${token}` } });
       alert("Profile updated successfully ");
     } catch (error) {
       console.error(error);

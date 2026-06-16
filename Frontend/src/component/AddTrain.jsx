@@ -92,7 +92,7 @@ function AddTrain() {
 ),
         pricePerKm: formData.pricePerKm || 2
       };
-      const res = await axios.post("http://localhost:8200/api/trains/add",payload,{ headers: { Authorization: `Bearer ${token}` } } );
+      const res = await axios.post("https://railway-management-22qq.onrender.com/api/trains/add",payload,{ headers: { Authorization: `Bearer ${token}` } } );
       toast.success(res.data.message);
       setFormData({trainNumber: "",trainName: "",from: "",to: "",departureTime: "",arrivalTime: "",runningDays: [],
 seatsAvailable: {

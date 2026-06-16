@@ -16,7 +16,7 @@ function ManageTrains() {
     try {
 
       const res = await axios.get(
-        "http://localhost:8200/api/trains",
+        "https://railway-management-22qq.onrender.com/api/trains",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -46,7 +46,7 @@ function ManageTrains() {
     try {
 
       await axios.delete(
-        `http://localhost:8200/api/trains/${id}`,
+        `https://railway-management-22qq.onrender.com/api/trains/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -72,7 +72,7 @@ function ManageTrains() {
     try {
 
       await axios.put(
-        `http://localhost:8200/api/trains/${editingTrain._id}`,
+        `https://railway-management-22qq.onrender.com/api/trains/${editingTrain._id}`,
         editingTrain,
         {
           headers: {

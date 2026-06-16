@@ -24,7 +24,7 @@ function Trains() {
 
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("http://localhost:8200/api/trains",{  headers: { Authorization: `Bearer ${token}`,},
+      const res = await axios.get("https://railway-management-22qq.onrender.com/api/trains",{  headers: { Authorization: `Bearer ${token}`,},
         }
       );
 

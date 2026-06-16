@@ -10,7 +10,7 @@ function TrainWaiting() {
 
   const fetchTrains = async () => {
     try {
-      const res = await axios.get( "http://localhost:8200/api/trains", { headers: { Authorization: `Bearer ${token}`}});
+      const res = await axios.get( "https://railway-management-22qq.onrender.com/api/trains", { headers: { Authorization: `Bearer ${token}`}});
       setTrains(res.data);
     } catch (error) {
       console.log(error);
@@ -23,7 +23,7 @@ function TrainWaiting() {
 
   const fetchWaitingList = async (trainId, trainName) => {
     try {
-      const res = await axios.get( `http://localhost:8200/api/bookings/waiting/${trainId}`, { headers: { Authorization: `Bearer ${token}` } } );
+      const res = await axios.get( `https://railway-management-22qq.onrender.com/api/bookings/waiting/${trainId}`, { headers: { Authorization: `Bearer ${token}` } } );
       setWaitingList(res.data);
       setSelectedTrain(trainName);
     } catch (error) {
